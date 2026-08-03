@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Light | Physics StoryVerse</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<h1>💡 Light</h1>
+
+<p>The Story of Light</p>
+
+<a href="chapters.html">
+<button>⬅ Back to Chapters</button>
+</a>
+
+</header>
+
+<main class="container">
+
+<section class="card">
+
+<h2>🎭 Story Begins</h2>
+
+<p>
+
+Aryan entered a dark cave with Professor Photon.
+
+Suddenly, Professor Photon switched on a torch.
+
+The cave became bright.
+
+Aryan asked,
+
+"How did darkness disappear so quickly?"
+
+Professor Photon smiled,
+
+"Because light travels incredibly fast."
+
+They placed a mirror in front of the torch.
+
+The light reflected back.
+
+Aryan was amazed.
+
+"Today, you will discover the amazing world of Light."
+
+</p>
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900" width="100%">
+
+</section>
+
+<section class="card">
+
+<h2>🎯 Mission</h2>
+
+<p>
+
+✔ Nature of Light
+
+✔ Reflection
+
+✔ Refraction
+
+✔ Mirrors
+
+✔ Lenses
+
+</p>
+
+</section>
+
+  <section class="card">
+
+<h2>📘 Learn Light</h2>
+
+<h3>Light</h3>
+
+<p>
+
+Light is a form of energy that enables us to see objects.
+
+</p>
+
+<hr>
+
+<h3>Reflection</h3>
+
+<p>
+
+Reflection is the bouncing back of light from a surface.
+
+</p>
+
+<hr>
+
+<h3>Refraction</h3>
+
+<p>
+
+Refraction is the bending of light when it passes from one medium to another.
+
+</p>
+
+<hr>
+
+<h3>Plane Mirror</h3>
+
+<p>
+
+A plane mirror forms an erect, virtual image of the same size.
+
+</p>
+
+<hr>
+
+<h3>Lens</h3>
+
+<p>
+
+Lenses are used to focus or spread light.
+
+</p>
+
+  </section>
+
+  <section class="card">
+
+<h2>📝 Light Quiz</h2>
+
+<p><b>Correct = +5 | Wrong = -3</b></p>
+
+<form id="quizForm">
+
+<p>1. Light is a form of?</p>
+
+<input type="radio" name="q1" value="5"> Energy<br>
+<input type="radio" name="q1" value="-3"> Matter<br>
+<input type="radio" name="q1" value="-3"> Gas<br><br>
+
+<p>2. Reflection means?</p>
+
+<input type="radio" name="q2" value="5"> Bouncing back of light<br>
+<input type="radio" name="q2" value="-3"> Absorption of light<br>
+<input type="radio" name="q2" value="-3"> Production of light<br><br>
+
+<p>3. Refraction is?</p>
+
+<input type="radio" name="q3" value="5"> Bending of light<br>
+<input type="radio" name="q3" value="-3"> Reflection of light<br>
+<input type="radio" name="q3" value="-3"> Scattering of light<br><br>
+
+<p>4. A plane mirror forms?</p>
+
+<input type="radio" name="q4" value="5"> Virtual Image<br>
+<input type="radio" name="q4" value="-3"> Real Image<br>
+<input type="radio" name="q4" value="-3"> Inverted Image Only<br><br>
+
+<p>5. Which device focuses light?</p>
+
+<input type="radio" name="q5" value="5"> Lens<br>
+<input type="radio" name="q5" value="-3"> Stone<br>
+<input type="radio" name="q5" value="-3"> Wood<br><br>
+
+<button type="button" onclick="calculateScore()">
+
+Submit Quiz
+
+</button>
+
+</form>
+
+  </section>
+
+  <section class="card">
+
+<h2>📚 Previous Year Questions (PYQs)</h2>
+
+<ol>
+
+<li>What is Reflection of Light?</li>
+
+<li>State the Laws of Reflection.</li>
+
+<li>Differentiate between Reflection and Refraction.</li>
+
+<li>Write two characteristics of the image formed by a Plane Mirror.</li>
+
+<li>What is Refraction? Give one real-life example.</li>
+
+</ol>
+
+  </section>
+
+  <section class="card">
+
+<h2>🌍 Current Applications of Light</h2>
+
+<ol>
+
+<li>🔦 LED lights save electricity.</li>
+
+<li>🌐 Optical Fibre provides high-speed internet.</li>
+
+<li>🔭 Telescopes help scientists observe space.</li>
+
+<li>📷 Cameras use lenses to capture images.</li>
+
+<li>🏥 Lasers are used in eye and medical surgeries.</li>
+
+</ol>
+
+  </section>
+
+  <section class="card">
+
+<h2>🏆 Final Result</h2>
+
+<p id="score">
+
+Your Score: 0
+
+</p>
+
+<p>
+
+⭐ Maximum Score: 25
+
+</p>
+
+<p>
+
+🎉 Congratulations! You have completed the Light chapter.
+
+</p>
+
+<a href="chapters.html">
+
+<button>
+
+⬅ Back to Chapters
+
+</button>
+
+</a>
+
+</section>
+
+</main>
+
+<script>
+
+function calculateScore(){
+
+let score = 0;
+
+for(let i=1;i<=5;i++){
+
+let ans=document.querySelector('input[name="q'+i+'"]:checked');
+
+if(ans){
+
+score+=Number(ans.value);
+
+}
+
+}
+
+document.getElementById("score").innerHTML=
+"🏆 Your Score: "+score;
+
+if(score>=15){
+
+alert("🎉 Excellent! You passed the Light chapter.");
+
+}else{
+
+alert("📚 Keep practicing and try again!");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
