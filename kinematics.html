@@ -1,1 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kinematics | Physics StoryVerse</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<h1>🚗 Kinematics</h1>
+
+<p>The Story of Motion</p>
+
+<a href="chapters.html">
+<button>⬅ Back to Chapters</button>
+</a>
+
+</header>
+
+<main class="container">
+
+<section class="card">
+
+<h2>🎭 Story Begins</h2>
+
+<h3>Characters</h3>
+
+<p>👦 Aryan</p>
+
+<p>🤖 Professor Photon</p>
+
+<p>🚗 Speedy (Talking Car)</p>
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800"
+width="100%">
+
+</section>
+
+<section class="card">
+
+<h2>📖 Chapter Story</h2>
+
+<p>
+
+Aryan visited the National Science Museum.
+
+Professor Photon welcomed him.
+
+Professor Photon said,
+
+"Today we won't study physics from books.
+
+We'll learn by racing."
+
+Suddenly,
+
+Speedy,
+
+a smart AI sports car,
+
+appeared.
+
+Speedy smiled and asked,
+
+"If I travel 100 metres in 5 seconds,
+
+how fast am I?"
+
+Aryan became curious.
+
+Professor Photon explained,
+
+"Kinematics is the branch of physics that studies motion without worrying about the force causing it."
+
+Aryan accepted the challenge.
+
+His mission was to understand
+
+Distance,
+
+Displacement,
+
+Speed,
+
+Velocity,
+
+and Acceleration.
+
+</p>
+
+</section>
+
+<section class="card">
+
+<h2>🎯 Mission</h2>
+
+<p>
+
+✔ Understand Motion
+
+✔ Learn Distance
+
+✔ Learn Displacement
+
+✔ Learn Speed
+
+✔ Learn Velocity
+
+✔ Learn Acceleration
+
+</p>
+
+</section>
+
+  <section class="card">
+
+<h2>📘 Learn Kinematics</h2>
+
+<h3>Distance</h3>
+
+<p>
+
+Distance is the total path travelled by an object.
+
+SI Unit:
+metre (m)
+
+</p>
+
+<hr>
+
+<h3>Displacement</h3>
+
+<p>
+
+Shortest distance between initial and final position.
+
+It has direction.
+
+</p>
+
+<hr>
+
+<h3>Speed</h3>
+
+<p>
+
+Speed = Distance / Time
+
+Unit = m/s
+
+</p>
+
+<hr>
+
+<h3>Velocity</h3>
+
+<p>
+
+Velocity = Displacement / Time
+
+Velocity has direction.
+
+</p>
+
+<hr>
+
+<h3>Acceleration</h3>
+
+<p>
+
+Acceleration = Change in Velocity / Time
+
+Unit = m/s²
+
+</p>
+
+</section>
+
+<section class="card">
+
+<h2>📝 Ready for Quiz?</h2>
+
+<p>
+
+You have learned the basics of Kinematics.
+
+Next,
+
+you will solve
+
+10 MCQs.
+
+Correct Answer = +5
+
+Wrong Answer = -3
+
+</p>
+
+</section>
+
+  <section class="card">
+
+<h2>📚 Previous Year Questions (PYQs)</h2>
+
+<ol>
+
+<li>Define Distance and Displacement.</li>
+
+<li>Differentiate between Speed and Velocity.</li>
+
+<li>What is Acceleration? State its SI Unit.</li>
+
+<li>A car travels 100 m in 5 s. Find its Speed.</li>
+
+<li>Why is Velocity called a vector quantity?</li>
+
+</ol>
+
+</section>
+
+<section class="card">
+
+<h2>➡️ Continue</h2>
+
+<p>
+Next you will explore current applications of Kinematics and see your final score.
+</p>
+
+</section>
+
+  <section class="card">
+
+<h2>📚 Previous Year Questions (PYQs)</h2>
+
+<ol>
+
+<li>Define Distance and Displacement.</li>
+
+<li>Differentiate between Speed and Velocity.</li>
+
+<li>What is Acceleration? State its SI Unit.</li>
+
+<li>A car travels 100 m in 5 s. Find its Speed.</li>
+
+<li>Why is Velocity called a vector quantity?</li>
+
+</ol>
+
+</section>
+
+<section class="card">
+
+<h2>➡️ Continue</h2>
+
+<p>
+Next you will explore current applications of Kinematics and see your final score.
+</p>
+
+</section>
+
+  <section class="card">
+
+<h2>🌍 Current Applications of Kinematics</h2>
+
+<ol>
+
+<li>🚗 Self-driving Cars use Kinematics to calculate speed and motion.</li>
+
+<li>🚀 ISRO uses Kinematics to launch rockets safely.</li>
+
+<li>🏏 Sports analytics measures player and ball movement.</li>
+
+<li>✈️ Aircraft navigation uses velocity and acceleration.</li>
+
+<li>📱 Mobile GPS tracks movement using Kinematics.</li>
+
+</ol>
+
+  </section>
+
+  <section class="card">
+
+<h2>🏆 Final Result</h2>
+
+<p id="score">
+Your Score: 0
+</p>
+
+<p>
+⭐ Maximum Score: 50
+</p>
+
+<p>
+🎉 Congratulations on completing the Kinematics chapter!
+</p>
+
+<a href="chapters.html">
+<button>
+⬅ Back to Chapters
+</button>
+</a>
+
+</section>
+
+</main>
+
+<script>
+
+function calculateScore(){
+
+let score = 0;
+
+for(let i=1;i<=10;i++){
+
+let ans = document.querySelector('input[name="q'+i+'"]:checked');
+
+if(ans){
+
+score += Number(ans.value);
+
+}
+
+}
+
+document.getElementById("score").innerHTML =
+"🏆 Your Score: " + score;
+
+if(score >= 35){
+
+alert("🎉 Excellent! You passed the chapter.");
+
+}else{
+
+alert("📚 Keep practicing and try again!");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
