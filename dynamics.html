@@ -1,1 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dynamics | Physics StoryVerse</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<h1>⚡ Dynamics</h1>
+
+<p>The Story of Force</p>
+
+<a href="chapters.html">
+<button>⬅ Back to Chapters</button>
+</a>
+
+</header>
+
+<main class="container">
+
+<section class="card">
+
+<h2>🎭 Story Begins</h2>
+
+<p>
+
+👦 Aryan returned to Professor Photon.
+
+Professor Photon smiled.
+
+"You already know motion.
+
+Now let's discover WHY objects move."
+
+Suddenly,
+
+a heavy wooden box appeared.
+
+Aryan tried to push it,
+
+but it didn't move.
+
+Professor Photon laughed.
+
+"You have discovered FORCE."
+
+</p>
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900" width="100%">
+
+</section>
+
+<section class="card">
+
+<h2>Mission</h2>
+
+<p>
+
+✔ Force
+
+✔ Newton's Laws
+
+✔ Mass
+
+✔ Weight
+
+✔ Friction
+
+</p>
+
+</section>
+
+  <section class="card">
+
+<h2>📘 Learn Dynamics</h2>
+
+<h3>Force</h3>
+
+<p>
+
+Force is a push or pull.
+
+SI Unit = Newton (N)
+
+</p>
+
+<hr>
+
+<h3>Newton's First Law</h3>
+
+<p>
+
+A body remains at rest or in uniform motion unless acted upon by an external force.
+
+</p>
+
+<hr>
+
+<h3>Newton's Second Law</h3>
+
+<p>
+
+Force = Mass × Acceleration
+
+F = ma
+
+</p>
+
+<hr>
+
+<h3>Newton's Third Law</h3>
+
+<p>
+
+Every action has an equal and opposite reaction.
+
+</p>
+
+<hr>
+
+<h3>Friction</h3>
+
+<p>
+
+Friction opposes motion between two surfaces.
+
+</p>
+
+  </section>
+
+  <section class="card">
+
+<h2>📝 Dynamics Quiz</h2>
+
+<p><b>Correct = +5 | Wrong = -3</b></p>
+
+<form id="quizForm">
+
+<p>1. SI Unit of Force?</p>
+
+<input type="radio" name="q1" value="5"> Newton<br>
+<input type="radio" name="q1" value="-3"> Joule<br>
+<input type="radio" name="q1" value="-3"> Watt<br><br>
+
+<p>2. Formula of Force?</p>
+
+<input type="radio" name="q2" value="5"> F = ma<br>
+<input type="radio" name="q2" value="-3"> F = mv<br>
+<input type="radio" name="q2" value="-3"> F = m/g<br><br>
+
+<p>3. First Law is also called?</p>
+
+<input type="radio" name="q3" value="5"> Law of Inertia<br>
+<input type="radio" name="q3" value="-3"> Law of Gravity<br>
+<input type="radio" name="q3" value="-3"> Hooke's Law<br><br>
+
+<p>4. Weight depends on?</p>
+
+<input type="radio" name="q4" value="5"> Gravity<br>
+<input type="radio" name="q4" value="-3"> Colour<br>
+<input type="radio" name="q4" value="-3"> Shape<br><br>
+
+<p>5. Friction always _____ motion.</p>
+
+<input type="radio" name="q5" value="5"> Opposes<br>
+<input type="radio" name="q5" value="-3"> Increases<br>
+<input type="radio" name="q5" value="-3"> Stops gravity<br><br>
+
+<button type="button" onclick="calculateScore()">
+
+Submit Quiz
+
+</button>
+
+</form>
+
+  </section>
+
+  <section class="card">
+
+<h2>📚 Previous Year Questions (PYQs)</h2>
+
+<ol>
+
+<li>Define Force and write its SI Unit.</li>
+
+<li>State Newton's First Law of Motion.</li>
+
+<li>State Newton's Second Law with formula.</li>
+
+<li>State Newton's Third Law with one example.</li>
+
+<li>What is Friction? Mention one advantage of friction.</li>
+
+</ol>
+
+  </section>
+
+  <section class="card">
+
+<h2>🌍 Current Applications of Dynamics</h2>
+
+<ol>
+
+<li>🚗 Car airbags reduce impact force during accidents.</li>
+
+<li>🚀 Rockets move according to Newton's Third Law.</li>
+
+<li>🏏 Cricketers apply force to hit the ball farther.</li>
+
+<li>🚲 Bicycle brakes use friction to stop safely.</li>
+
+<li>🛰️ Spacecraft use Newton's Laws for movement in space.</li>
+
+</ol>
+
+  </section>
+
+  <section class="card">
+
+<h2>🏆 Final Result</h2>
+
+<p id="score">
+
+Your Score: 0
+
+</p>
+
+<p>
+
+⭐ Maximum Score: 25
+
+</p>
+
+<p>
+
+🎉 Congratulations! You have completed the Dynamics chapter.
+
+</p>
+
+<a href="chapters.html">
+
+<button>
+
+⬅ Back to Chapters
+
+</button>
+
+</a>
+
+</section>
+
+</main>
+
+<script>
+
+function calculateScore(){
+
+let score = 0;
+
+for(let i=1;i<=5;i++){
+
+let ans = document.querySelector('input[name="q"+i+"]:checked');
+
+if(ans){
+
+score += Number(ans.value);
+
+}
+
+}
+
+document.getElementById("score").innerHTML =
+"🏆 Your Score: " + score;
+
+if(score >= 15){
+
+alert("🎉 Excellent! You passed the Dynamics chapter.");
+
+}else{
+
+alert("📚 Keep practicing and try again!");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
