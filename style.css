@@ -1,46 +1,52 @@
-*{
+`*{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#eef5ff;
-color:#222;
+background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+color:white;
+min-height:100vh;
 }
 
 .hero{
-background:linear-gradient(135deg,#0047AB,#00AEEF);
-color:white;
+background:linear-gradient(135deg,#ff6b6b,#ff8e53,#ffcc70);
 padding:60px 20px;
 text-align:center;
+border-radius:0 0 30px 30px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 .hero h1{
-font-size:45px;
+font-size:48px;
 margin-bottom:15px;
+font-weight:700;
 }
 
 .hero p{
 font-size:20px;
+opacity:.95;
 margin-bottom:20px;
 }
 
 button{
-background:#ff9800;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
 color:white;
 border:none;
-padding:15px 30px;
-font-size:18px;
-border-radius:30px;
+padding:14px 28px;
+font-size:17px;
+font-weight:600;
+border-radius:40px;
 cursor:pointer;
 transition:.3s;
+box-shadow:0 5px 15px rgba(0,114,255,.4);
 }
 
 button:hover{
-background:#e68900;
-transform:scale(1.05);
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 10px 25px rgba(0,114,255,.6);
 }
 
 .container{
@@ -50,35 +56,113 @@ margin:40px auto;
 }
 
 .card{
-background:white;
-padding:25px;
-margin-bottom:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:28px;
+margin-bottom:28px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 8px 24px rgba(0,0,0,.25);
 }
 
 .card h2{
-color:#0047AB;
-margin-bottom:15px;
+color:#ffd166;
+margin-bottom:16px;
+font-size:28px;
+}
+
+.card h3{
+color:#7dd3fc;
+margin:14px 0;
 }
 
 .card p{
-margin:10px 0;
+margin:12px 0;
 font-size:18px;
+line-height:1.7;
+}
+
+.card img{
+border-radius:18px;
+margin-top:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+hr{
+border:none;
+height:1px;
+background:rgba(255,255,255,.15);
+margin:18px 0;
+}
+
+/* 🌈 Progress Bar */
+
+.progress-container{
+background:rgba(255,255,255,.15);
+border-radius:20px;
+overflow:hidden;
+height:18px;
+margin:15px 0 10px;
+}
+
+.progress-bar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#00f5a0,#00d9f5,#7c4dff);
+border-radius:20px;
+transition:width .8s ease;
+}
+
+.progress-text{
+font-size:15px;
+color:#e2e8f0;
+margin-bottom:5px;
+}
+
+/* Quiz */
+
+form p{
+font-weight:600;
+margin-top:18px;
+}
+
+input[type="radio"]{
+margin-right:8px;
+}
+
+ol{
+padding-left:22px;
+}
+
+ol li{
+margin:12px 0;
+line-height:1.6;
+}
+
+/* Score */
+
+#score{
+font-size:28px;
+font-weight:700;
+color:#00f5a0;
+margin:15px 0;
 }
 
 footer{
-background:#0047AB;
-color:white;
+background:rgba(0,0,0,.35);
 text-align:center;
 padding:20px;
 margin-top:40px;
+font-size:16px;
+color:#cbd5e1;
 }
+
+/* Mobile */
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:32px;
+font-size:34px;
 }
 
 .hero p{
@@ -89,4 +173,16 @@ button{
 width:100%;
 }
 
+.card{
+padding:22px;
 }
+
+.card h2{
+font-size:24px;
+}
+
+.card p{
+font-size:16px;
+}
+
+}`
