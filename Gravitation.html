@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gravitation | Physics StoryVerse</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<h1>🌍 Gravitation</h1>
+
+<p>The Story of Gravity</p>
+
+<a href="chapters.html">
+<button>⬅ Back to Chapters</button>
+</a>
+
+</header>
+
+<main class="container">
+
+<section class="card">
+
+<h2>🎭 Story Begins</h2>
+
+<p>
+
+Aryan and Professor Photon visited a beautiful apple garden.
+
+Suddenly,
+
+an apple fell from a tree.
+
+Aryan asked,
+
+"Why didn't it fly upward?"
+
+Professor Photon smiled,
+
+"Because Earth pulls everything towards itself."
+
+"This invisible pulling force is called Gravity."
+
+Aryan became excited to discover why planets also move around the Sun.
+
+</p>
+
+<img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=900" width="100%">
+
+</section>
+
+<section class="card">
+
+<h2>🎯 Mission</h2>
+
+<p>
+
+✔ Gravity
+
+✔ Universal Law of Gravitation
+
+✔ Mass
+
+✔ Weight
+
+✔ Free Fall
+
+</p>
+
+</section>
+
+  <section class="card">
+
+<h2>📘 Learn Gravitation</h2>
+
+<h3>Gravity</h3>
+
+<p>
+
+Gravity is the force by which Earth attracts objects towards its center.
+
+</p>
+
+<hr>
+
+<h3>Universal Law of Gravitation</h3>
+
+<p>
+
+Every object attracts every other object in the universe.
+
+</p>
+
+<hr>
+
+<h3>Mass</h3>
+
+<p>
+
+Mass is the amount of matter in a body.
+
+SI Unit = kilogram (kg)
+
+</p>
+
+<hr>
+
+<h3>Weight</h3>
+
+<p>
+
+Weight = Mass × Gravity
+
+W = mg
+
+</p>
+
+<hr>
+
+<h3>Free Fall</h3>
+
+<p>
+
+When an object falls only under gravity, it is called free fall.
+
+</p>
+
+  </section>
+
+  <section class="card">
+
+<h2>📝 Gravitation Quiz</h2>
+
+<p><b>Correct = +5 | Wrong = -3</b></p>
+
+<form id="quizForm">
+
+<p>1. Who discovered Universal Gravitation?</p>
+
+<input type="radio" name="q1" value="5"> Isaac Newton<br>
+<input type="radio" name="q1" value="-3"> Einstein<br>
+<input type="radio" name="q1" value="-3"> Galileo<br><br>
+
+<p>2. SI Unit of Mass?</p>
+
+<input type="radio" name="q2" value="5"> Kilogram<br>
+<input type="radio" name="q2" value="-3"> Newton<br>
+<input type="radio" name="q2" value="-3"> Joule<br><br>
+
+<p>3. Formula of Weight?</p>
+
+<input type="radio" name="q3" value="5"> W = mg<br>
+<input type="radio" name="q3" value="-3"> W = ma<br>
+<input type="radio" name="q3" value="-3"> W = mv<br><br>
+
+<p>4. Gravity pulls objects?</p>
+
+<input type="radio" name="q4" value="5"> Towards Earth<br>
+<input type="radio" name="q4" value="-3"> Towards Sky<br>
+<input type="radio" name="q4" value="-3"> Sideways<br><br>
+
+<p>5. Free Fall means?</p>
+
+<input type="radio" name="q5" value="5"> Motion under gravity only<br>
+<input type="radio" name="q5" value="-3"> Motion with friction<br>
+<input type="radio" name="q5" value="-3"> Motion in water<br><br>
+
+<button type="button" onclick="calculateScore()">
+
+Submit Quiz
+
+</button>
+
+</form>
+
+  </section>
+
+  <section class="card">
+
+<h2>📚 Previous Year Questions (PYQs)</h2>
+
+<ol>
+
+<li>State the Universal Law of Gravitation.</li>
+
+<li>Differentiate between Mass and Weight.</li>
+
+<li>Write the formula of Weight and explain its terms.</li>
+
+<li>What is Free Fall?</li>
+
+<li>Why do planets revolve around the Sun?</li>
+
+</ol>
+
+  </section>
+
+  <section class="card">
+
+<h2>🌍 Current Applications of Gravitation</h2>
+
+<ol>
+
+<li>🛰️ Satellites stay in orbit because of gravity.</li>
+
+<li>🌍 GPS satellites use gravitational calculations.</li>
+
+<li>🚀 ISRO plans rocket missions using gravity.</li>
+
+<li>🌙 Moon revolves around Earth due to gravity.</li>
+
+<li>🌊 Ocean tides occur because of the Moon's gravitational pull.</li>
+
+</ol>
+
+  </section>
+
+  <section class="card">
+
+<h2>🏆 Final Result</h2>
+
+<p id="score">
+
+Your Score: 0
+
+</p>
+
+<p>
+
+⭐ Maximum Score: 25
+
+</p>
+
+<p>
+
+🎉 Congratulations! You have completed the Gravitation chapter.
+
+</p>
+
+<a href="chapters.html">
+
+<button>
+
+⬅ Back to Chapters
+
+</button>
+
+</a>
+
+</section>
+
+</main>
+
+<script>
+
+function calculateScore(){
+
+let score = 0;
+
+for(let i=1;i<=5;i++){
+
+let ans = document.querySelector('input[name="q' + i + '"]:checked');
+
+if(ans){
+
+score += Number(ans.value);
+
+}
+
+}
+
+document.getElementById("score").innerHTML =
+"🏆 Your Score: " + score;
+
+if(score>=15){
+
+alert("🎉 Excellent! You passed the Gravitation chapter.");
+
+}else{
+
+alert("📚 Keep practicing and try again!");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
